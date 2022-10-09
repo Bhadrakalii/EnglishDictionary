@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results | English Dictionary</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body{
+    background-color: antiquewhite;
+}
+#main{
+    width : 600px;
+    height : 500px;
+    {#background-color: cornsilk;#}
+    margin: 20px 0px 0px 10px; {#  top right bottom left#}
+}
+#word {
+    font-size: 20px;
+}
+#meaning{
+
+}
+#Synonyms{
+    margin: 10px 0 0 0;
+}
+#Antonyms{
+
+}
+</style>
+</head>
+
+<body>
+<h2 class="text-center pt-4">English Dictionary</h2>
+<div class="container-fluid" id = "main">
+    <div id = "word">
+        <p class="h1"><u>{{ word }}</u></p>
+    </div>
+    <div id = "meaning">
+        {# Static <p>an instance of something happening; an event or occurrence.</p>#}
+        <h6> Meaning:</h6> {{ meaning }}
+    </div>
+    <div id = "Synonyms">
+        <p class ="h6"> Synonyms</p>
+            {% for synonym in synonyms %}
+                <ul>
+                    <li>{{ synonym }}</li>
+                </ul>
+            {% endfor %}
+{#            <li>event</li>#}
+{#            <li>occurrence</li>#}
+{#            <li>occasion</li>#}
+{#            <li>episode</li>#}
+{#            <li>happening</li>#}
+{#            <li>affair</li>#}
+
+        </ul>
+    </div>
+       <div id = "Antonyms">
+        <p class = "h6">Antonyms</p>
+               {% for antonym in antonyms %}
+                <ul>
+                    <li>{{ antonym }}</li>
+                </ul>
+                {% endfor %}
+{#            <li>asynchronous</li>#}
+{#            <li>noncontemporary</li>#}
+{#            <li>nonsimultaneous</li>#}
+{#            <li>nonsynchronous</li>#}
+        </ul>
+    </div>
+
+
+</div>
+</body>
+</html>
